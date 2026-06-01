@@ -7,7 +7,7 @@ function App() {
   const [date, setDate] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  const API_URL = "http://127.0.0.1:5000/tasks";
+const API_URL = "https://smart-task-reminder-a3.onrender.com/tasks";
 
   const getTasks = async () => {
     const response = await fetch(API_URL);
