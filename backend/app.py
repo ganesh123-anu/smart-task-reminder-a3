@@ -51,5 +51,8 @@ def delete_task(task_id):
     response = supabase.table("tasks").delete().eq("id", task_id).execute()
     return jsonify(response.data)
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
